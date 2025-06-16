@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter | Project 8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Currency Converter</h1>
+            <p>Convert between currencies with real-time exchange rates</p>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <div class="input-group">
+                    <div class="amount-box">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" value="1" min="0">
+                    </div>
+                    
+                    <div class="currency-box">
+                        <label for="from-currency">From</label>
+                        <select id="from-currency">
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+                    
+                    <button id="swap-btn" class="swap-btn" aria-label="Swap currencies">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                    
+                    <div class="currency-box">
+                        <label for="to-currency">To</label>
+                        <select id="to-currency">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - United States Dollar</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="result-box">
+                    <div id="rate-info" class="rate-info">Loading exchange rate...</div>
+                    <div id="converted-amount" class="converted-amount">0.00</div>
+                </div>
+                
+                <button id="convert-btn" class="convert-btn">Convert</button>
+            </div>
+            
+            <div class="info-box">
+                <h3>Popular Currency Conversions</h3>
+                <div class="popular-conversions" id="popular-conversions">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Exchange rates are updated every 60 minutes. Last updated: <span id="last-updated">--</span></p>
+            <p class="disclaimer">Disclaimer: This converter uses free-tier API data and may not reflect real-time market rates.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
